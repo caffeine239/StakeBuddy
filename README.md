@@ -28,4 +28,4 @@ If you'd like to contribute to StakeBuddy, feel free to fork the repository and 
 
 StakeBuddy is licensed under the [MIT License](link_to_license), which means you are free to use, modify, and distribute the bot however you like, as long as you include the appropriate license information.
 
-![ScreenShot]([https://raw.githubusercontent.com/caffeine239/Unity3DWoW/master/Screenshot01.png](https://raw.githubusercontent.com/caffeine239/StakeBuddy/main/stakebuddy.png))
+![ScreenShot](https://raw.githubusercontent.com/caffeine239/StakeBuddy/main/stakebuddy.png)
