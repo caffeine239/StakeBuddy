@@ -23,8 +23,16 @@ public class KenoAuto : Strategy
     public override void Init()
     {
         SetBetAmount(GetMainBotBetAmount());
-        selectedNumbers = GetRandomKenoNumbers();
-        SetKenoNumbers(selectedNumbers);
+
+        if (GetKenoNumbers().Count < 1)
+        {
+            selectedNumbers = GetRandomKenoNumbers();
+            SetKenoNumbers(selectedNumbers);
+        }
+        else
+        {
+            selectedNumbers = GetKenoNumbers();
+        }
     }
     public override void Tick()
     {
