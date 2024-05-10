@@ -28,6 +28,7 @@ public class KenoAuto : Strategy
     }
     public override void Tick()
     {
+        SetBetAmount(GetMainBotBetAmount());
         bool wasWin;
         List<int> result = (List<int>)DoBet(out wasWin);
     }
