@@ -19,13 +19,13 @@ public class LimboAuto : Strategy
     }
     public override void Init()
     {
-        SetBetAmount(GetMainBotBetAmount());
-        SetMultiplierTarget(GetLimboMultiplierTarget());
+        SetMainBetAmount(GetMainBetAmount());
+        SetBotMultiplierTarget(GetLimboMultiplierTarget());
     }
     public override void Tick()
     {
-        SetBetAmount(GetMainBotBetAmount());
-        SetMultiplierTarget(GetLimboMultiplierTarget());
+        SetMainBetAmount(GetMainBetAmount());
+        SetBotMultiplierTarget(GetLimboMultiplierTarget());
 
         bool wasWin;
         double result = (double)DoBet(out wasWin);
