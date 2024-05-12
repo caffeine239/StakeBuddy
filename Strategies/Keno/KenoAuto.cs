@@ -1,4 +1,4 @@
-﻿using StakeBuddy.Bots.CommonBot;
+using StakeBuddy.Bots.CommonBot;
 using System.Collections.Generic;
 
 public class KenoAuto : Strategy
@@ -22,21 +22,16 @@ public class KenoAuto : Strategy
     }
     public override void Init()
     {
-        SetBetAmount(GetMainBotBetAmount());
+        SetMainBetAmount(GetMainBetAmount());
 
         if (GetKenoNumbers().Count < 1)
         {
             selectedNumbers = GetRandomKenoNumbers();
             SetKenoNumbers(selectedNumbers);
         }
-        else
-        {
-            selectedNumbers = GetKenoNumbers();
-        }
     }
     public override void Tick()
     {
-        SetBetAmount(GetMainBotBetAmount());
         bool wasWin;
         List<int> result = (List<int>)DoBet(out wasWin);
     }
