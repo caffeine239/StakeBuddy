@@ -1,4 +1,4 @@
-﻿using StakeBuddy.Bots.CommonBot;
+using StakeBuddy.Bots.CommonBot;
 
 public class LimboAuto : Strategy
 {
@@ -20,12 +20,12 @@ public class LimboAuto : Strategy
     public override void Init()
     {
         SetBetAmount(GetMainBotBetAmount());
-        SetMultiplierTarget(GetMainMultiplierTarget());
+        SetMultiplierTarget(GetLimboMultiplierTarget());
     }
     public override void Tick()
     {
         SetBetAmount(GetMainBotBetAmount());
-        SetMultiplierTarget(GetMainMultiplierTarget());
+        SetMultiplierTarget(GetLimboMultiplierTarget());
 
         bool wasWin;
         double result = (double)DoBet(out wasWin);
