@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class DiceyLimbo : Strategy
 {
     DiceBot diceBot;
+
     public override StakeOriginalGame DesignedForStakeOriginal
     {
         get
@@ -24,16 +25,15 @@ public class DiceyLimbo : Strategy
     {
         SetBotBetAmount(GetMainBetAmount());
         SetBotMultiplierTarget(2);
-        diceBot = GetInactiveBot("DiceBot");
+        diceBot = (DiceBot)GetInactiveBot("DiceBot");
         diceBot.SetCurrency();
     }
     public override void Tick()
     {
         bool wasWin;
         double result = (double)DoBet(out wasWin);
-        int Losses = GetBot().LossCount;
 
-        if (!wasWin && Losses > 1)
+        if (!wasWin)
         {
             diceBot.BetAmount = GetBotBetAmount() * 2.05;
             diceBot.MultiplierTarget = 48;
