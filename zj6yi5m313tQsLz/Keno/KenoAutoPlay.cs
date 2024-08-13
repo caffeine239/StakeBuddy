@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
-using StakeBuddy.Bots.CommonBot;
+using StakeBuddy.Models;
 
 public class StakeBuddyKeno : Strategy
 {
