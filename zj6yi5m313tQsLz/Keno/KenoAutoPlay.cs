@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using StakeBuddy.Models;
+using StakeBuddy.StakeBuddy.Helpers;
 
 public class StakeBuddyKeno : Strategy
 {
